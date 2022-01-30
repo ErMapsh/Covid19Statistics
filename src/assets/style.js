@@ -5,11 +5,20 @@ const style =  StyleSheet.create({
         flex: 1,
         justifyContent: 'space-around',
         alignItems: 'center',
-        backgroundColor: 'black',
+    }, 
+    text:{
+        fontSize : 20, 
+        fontWeight: 'bold',
     }
 })
 
 const styleSplashScreen = StyleSheet.create({
+    container:{
+        flex: 1,
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        backgroundColor: 'black',
+    }, 
     logo: {
         width: 150, 
         height: 150,

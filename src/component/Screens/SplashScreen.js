@@ -1,11 +1,11 @@
 import React from 'react';
 import {View, Image, Text, StatusBar} from 'react-native';
-import {style, styleSplashScreen} from '../../assets/style';
+import {styleSplashScreen} from '../../assets/style';
 
 export default function SplashScreen() {
 
   return (
-    <View style={style.container}>
+    <View style={styleSplashScreen.container}>
       <StatusBar hidden={true} />
       <View></View>
 
