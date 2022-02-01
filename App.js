@@ -3,8 +3,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 //importing screens
-import SplashScreen from './src/component/Screens/SplashScreen';
-import MBNavigation from './src/component/Material Bottom Tabs Navigator/MBNavigation'
+import SplashScreen from './src/Screens/SplashScreen';
+import MBNavigation from './src/navigation/MBNavigation'
 
 export default function App() {
   //creating stack for navigate a screen
@@ -23,7 +23,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-          {splashScreen && <Stack.Screen name="SplashScreen" component={SplashScreen} options={{headerShown : false}}/>}
+          {/* {splashScreen && <Stack.Screen name="SplashScreen" component={SplashScreen} options={{headerShown : false}}/>} */}
           <Stack.Screen name="MBNavigation" component={MBNavigation} options={{headerShown: false}}/>
       </Stack.Navigator>
     </NavigationContainer>
