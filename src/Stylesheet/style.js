@@ -12,8 +12,8 @@ const style = StyleSheet.create({
   },
   backgroundImage: {
     flex: 1,
-    justifyContent: "center",
-  }
+    justifyContent: 'center',
+  },
 });
 
 const styleSplashScreen = StyleSheet.create({
@@ -52,7 +52,7 @@ const cardStyle = StyleSheet.create({
   text: {
     fontSize: 17,
     color: 'white',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   text1: {
     fontSize: 17,
@@ -60,35 +60,19 @@ const cardStyle = StyleSheet.create({
   },
 });
 
-
 const HomeStyle = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: 'black',
   },
-  dashboard: {
-    backgroundColor: '#FF9F45',
-    color: 'white',
-    textAlign: 'center',
-    padding: 20,
-    fontSize: 22,
-    fontWeight: 'bold',
-    width: Dimensions.get('window').width,
-  },
-  displayContainer: {
-    width: Dimensions.get('window').width - 30,
+  CardsContainer: {
+    width: Dimensions.get('window').width - 2,
     flex: 1,
     flexDirection: 'row',
-    padding: 14,
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    // backgroundColor: 'red',
-    margin: 10,
-  },
-  image: {
-    flex: 1,
-    justifyContent: "center"
+    marginTop: 5,
+    backgroundColor: 'red',
   },
 });
 

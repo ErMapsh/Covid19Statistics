@@ -1,10 +1,12 @@
 import React from 'react';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs'; //importing tab navigator
 import Ionicons from 'react-native-vector-icons/Ionicons';
+
 // importing screens
 import HomeScreen from '../Screens/HomeScreen';
-import ByDetails from '../Screens/ByDetails';
+import Search from '../Screens/Search';
 import About from '../Screens/About';
+import Stat from '../Screens/Stat'
 
 export default function MBNavigation() {
   const Tab = createMaterialBottomTabNavigator();
@@ -17,8 +19,13 @@ export default function MBNavigation() {
         options={{tabBarIcon: () => <SetupIcon name="home" />}}
       />
       <Tab.Screen
-        name="ByDetails"
-        component={ByDetails}
+        name="Stat"
+        component={Stat}
+        options={{tabBarIcon: () => <SetupIcon name="stats-chart-outline" />}}
+      />
+      <Tab.Screen
+        name="Search"
+        component={Search}
         options={{tabBarIcon: () => <SetupIcon name="search-circle" />}}
       />
       <Tab.Screen
