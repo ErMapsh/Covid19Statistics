@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import {View, Text} from 'react-native';
-import {HomeStyle} from '../Stylesheet/style';
+import {View, Text, ImageBackground} from 'react-native';
+import {style} from '../Stylesheet/HomeStyle';
 
 export default function HomeScreen() {
   return (
-    <View>
-      <Text>HomePage</Text>
+    <View style={style.container}>
+      <View></View>
+      <View></View>
     </View>
   );
 }

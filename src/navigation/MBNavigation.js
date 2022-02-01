@@ -12,7 +12,7 @@ export default function MBNavigation() {
   const Tab = createMaterialBottomTabNavigator();
   return (
     
-    <Tab.Navigator initialRouteName="Home" barStyle={{ backgroundColor: '#694fad' }}>
+    <Tab.Navigator initialRouteName="Home" barStyle={{ backgroundColor: '#54BAB9' }}>
       <Tab.Screen
         name="Home"
         component={HomeScreen}
@@ -21,7 +21,7 @@ export default function MBNavigation() {
       <Tab.Screen
         name="Stat"
         component={Stat}
-        options={{tabBarIcon: () => <SetupIcon name="stats-chart-outline" />}}
+        options={{tabBarIcon: () => <SetupIcon name="stats-chart" />}}
       />
       <Tab.Screen
         name="Search"
@@ -31,12 +31,12 @@ export default function MBNavigation() {
       <Tab.Screen
         name="About"
         component={About}
-        options={{tabBarIcon: () => <SetupIcon name="help-circle" />}}
+        options={{tabBarIcon: () => <SetupIcon name="alert-circle" />}}
       />
     </Tab.Navigator>
   );
 }
 
 const SetupIcon = props => {
-  return <Ionicons name={props.name} size={20} color={'white'}/>;
+  return <Ionicons name={props.name} size={22} color={'black'}/>;
 };
