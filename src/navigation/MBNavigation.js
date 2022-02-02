@@ -12,7 +12,7 @@ export default function MBNavigation() {
   const Tab = createMaterialBottomTabNavigator();
   return (
     
-    <Tab.Navigator initialRouteName="Home" barStyle={{ backgroundColor: '#54BAB9' }}>
+    <Tab.Navigator initialRouteName="Home" barStyle={{ backgroundColor: 'white'}}>
       <Tab.Screen
         name="Home"
         component={HomeScreen}
