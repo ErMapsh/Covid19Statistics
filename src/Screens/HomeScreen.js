@@ -1,12 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import {View, Text, TouchableOpacity, Linking} from 'react-native';
-import {style} from '../Stylesheet/HomeStyle';
+import {View, Text, TouchableOpacity, Linking, Image} from 'react-native';
+import {style, style1} from '../Stylesheet/HomeStyle';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import CountryFlag from 'react-native-country-flag';
 import call from 'react-native-phone-call';
 
 export default function HomeScreen() {
-
   //call
   const args = {
     number: '+911123978046', // String value with the number to call
@@ -18,18 +17,15 @@ export default function HomeScreen() {
 
   //site link
   const OnPressSite = () => {
-    Linking.openURL('https://www.cowin.gov.in/')
+    Linking.openURL('https://www.cowin.gov.in/');
   };
   return (
     <View style={style.container}>
       {/* first container */}
       <View style={style.firstContainer}>
-        <Ionicons
-          name="reorder-two"
-          size={35}
-          color={'white'}
-          style={{marginHorizontal: 12, marginVertical: 8}}
-        />
+        <View style={{marginHorizontal: 12, marginVertical: 8}}>
+          <Ionicons name="reorder-two" size={35} color={'white'} />
+        </View>
 
         {/* stat and flag */}
         <View style={style.StatFlag}>
@@ -49,8 +45,8 @@ export default function HomeScreen() {
         <View style={style.Sick}>
           <Text style={style.SickText1}>Are you feeling sick?</Text>
           <Text style={style.SickText2}>
-            If you feel sick with any of covid-19 symptoms please call or SMS us
-            immediately for help.
+            If you feel sick with any of covid-19 symptoms please call
+            immediately for help or checkout the site for vaccination.
           </Text>
         </View>
 
@@ -62,7 +58,7 @@ export default function HomeScreen() {
             <Text style={style.helptext}>Call Now</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={style.link} onPress={()=> OnPressSite()}>
+          <TouchableOpacity style={style.link} onPress={() => OnPressSite()}>
             <Ionicons name="planet" color={'white'} size={25} />
             <Text style={style.helptext}>CoWIN</Text>
           </TouchableOpacity>
@@ -70,7 +66,55 @@ export default function HomeScreen() {
       </View>
 
       {/* second container */}
-      <View></View>
+      <View style={style1.SecondContainer}>
+        {/* Prevention Box */}
+
+        <View style={style1.Prevention}>
+          {/* Prevention headline */}
+          <Text style={style1.PreventionText}>Prevention</Text>
+
+          {/* Prevention Images */}
+          <View style={style1.PreventionImageContainer}>
+            <View style={style1.ImageAndText}>
+              <Image
+                source={require('../img/new/distance.jpg')}
+                style={style1.ImgSize}
+              />
+              <Text style={style1.ImgText}>Avoid close contact</Text>
+            </View>
+
+            <View style={style1.ImageAndText}>
+              <Image
+                source={require('../img/new/wash.jpg')}
+                style={style1.ImgSize}
+              />
+              <Text style={style1.ImgText}>Clean your hands often </Text>
+            </View>
+
+            <View style={style1.ImageAndText}>
+              <Image
+                source={require('../img/new/Mask.jpg')}
+                style={style1.ImgSize}
+              />
+              <Text style={style1.ImgText}>Wear a facemask </Text>
+            </View>
+          </View>
+        </View>
+
+        {/* vacination part */}
+        <View style={style1.VaccinationContainer}>
+          <Image
+            source={require('../img/new/vaccinated.jpg')}
+            style={style1.VaccineImgSize}
+          />
+          <View style={style1.textArea}>
+            <Text style={style1.vaccineQuotes1}>Get Vaccinated.</Text>
+            <Text style={style1.vaccineQuotes}>Do your part.</Text>
+            <Text style={style1.vaccineQuotes}>Protect yourself.</Text>
+            <Text style={style1.vaccineQuotes}>Protect others.</Text>
+          </View>
+        </View>
+      </View>
     </View>
   );
 }
