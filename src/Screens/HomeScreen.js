@@ -21,54 +21,55 @@ export default function HomeScreen() {
   };
   return (
     <View style={style.container}>
-      
       {/* first container */}
       <View style={style.firstContainer}>
+        {/* Menu Bar icon */}
         <View>
           <Ionicons name="reorder-two" size={35} color={'white'} />
         </View>
 
+        {/* App name and India flag */}
         <View style={style.NameFlagSickCall}>
+
           {/* stat and flag */}
-        <View style={style.StatFlag}>
-          {/* stat */}
-          <View>
-            <Text style={style.Statistics}>Covid-19 Statistics</Text>
+          <View style={style.StatFlag}>
+            {/* stat */}
+            <View>
+              <Text style={style.AppName}>Covid-19 Statistics</Text>
+            </View>
+
+            {/* flag */}
+            <View style={style.ImgContainer}>
+              <CountryFlag isoCode="in" size={35} style={style.CountryImg} />
+              <Text style={{fontWeight: 'bold'}}>IND</Text>
+            </View>
           </View>
 
-          {/* flag */}
-          <View style={style.ImgContainer}>
-            <CountryFlag isoCode="in" size={35} style={style.CountryImg} />
-            <Text style={{fontWeight: 'bold'}}>IND</Text>
+          {/* note */}
+          <View style={style.Sick}>
+            <Text style={style.SickText1}>Are you feeling sick?</Text>
+            <Text style={style.SickText2}>
+              If you feel sick with any of covid-19 symptoms please call
+              immediately for help or checkout the site for vaccination.
+            </Text>
           </View>
+
+          {/* call and link */}
+          <View style={style.helpline}>
+            {/* call */}
+            <TouchableOpacity style={style.call} onPress={() => OnPressCall()}>
+              <Ionicons name="call" color={'white'} size={25} />
+              <Text style={style.helptext}>Call Now</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={style.link} onPress={() => OnPressSite()}>
+              <Ionicons name="planet" color={'white'} size={25} />
+              <Text style={style.helptext}>CoWIN</Text>
+            </TouchableOpacity>
         </View>
 
-        {/* note */}
-        <View style={style.Sick}>
-          <Text style={style.SickText1}>Are you feeling sick?</Text>
-          <Text style={style.SickText2}>
-            If you feel sick with any of covid-19 symptoms please call
-            immediately for help or checkout the site for vaccination.
-          </Text>
-        </View>
-
-        {/* call and link */}
-        <View style={style.helpline}>
-          {/* call */}
-          <TouchableOpacity style={style.call} onPress={() => OnPressCall()}>
-            <Ionicons name="call" color={'white'} size={25} />
-            <Text style={style.helptext}>Call Now</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={style.link} onPress={() => OnPressSite()}>
-            <Ionicons name="planet" color={'white'} size={25} />
-            <Text style={style.helptext}>CoWIN</Text>
-          </TouchableOpacity>
-        </View>
         </View>
       </View>
-
-      
     </View>
   );
 }
