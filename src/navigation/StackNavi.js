@@ -20,13 +20,13 @@ export default function StackNavi() {
   }, []);
   return (
     <Stack.Navigator>
-      {splashScreen && (
+      {/* {splashScreen && (
         <Stack.Screen
           name="SplashScreen"
           component={SplashScreen}
           options={{headerShown: false}}
         />
-      )}
+      )} */}
       <Stack.Screen
         name="MBNavigation"
         component={MBNavigation}

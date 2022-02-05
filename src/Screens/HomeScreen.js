@@ -21,13 +21,15 @@ export default function HomeScreen() {
   };
   return (
     <View style={style.container}>
+      
       {/* first container */}
       <View style={style.firstContainer}>
-        <View style={{marginHorizontal: 12, marginVertical: 8}}>
+        <View>
           <Ionicons name="reorder-two" size={35} color={'white'} />
         </View>
 
-        {/* stat and flag */}
+        <View style={style.NameFlagSickCall}>
+          {/* stat and flag */}
         <View style={style.StatFlag}>
           {/* stat */}
           <View>
@@ -63,58 +65,10 @@ export default function HomeScreen() {
             <Text style={style.helptext}>CoWIN</Text>
           </TouchableOpacity>
         </View>
-      </View>
-
-      {/* second container */}
-      <View style={style1.SecondContainer}>
-        {/* Prevention Box */}
-
-        <View style={style1.Prevention}>
-          {/* Prevention headline */}
-          <Text style={style1.PreventionText}>Prevention</Text>
-
-          {/* Prevention Images */}
-          <View style={style1.PreventionImageContainer}>
-            <View style={style1.ImageAndText}>
-              <Image
-                source={require('../img/new/distance.jpg')}
-                style={style1.ImgSize}
-              />
-              <Text style={style1.ImgText}>Avoid close contact</Text>
-            </View>
-
-            <View style={style1.ImageAndText}>
-              <Image
-                source={require('../img/new/wash.jpg')}
-                style={style1.ImgSize}
-              />
-              <Text style={style1.ImgText}>Clean your hands often </Text>
-            </View>
-
-            <View style={style1.ImageAndText}>
-              <Image
-                source={require('../img/new/Mask.jpg')}
-                style={style1.ImgSize}
-              />
-              <Text style={style1.ImgText}>Wear a facemask </Text>
-            </View>
-          </View>
-        </View>
-
-        {/* vacination part */}
-        <View style={style1.VaccinationContainer}>
-          <Image
-            source={require('../img/new/vaccinated.jpg')}
-            style={style1.VaccineImgSize}
-          />
-          <View style={style1.textArea}>
-            <Text style={style1.vaccineQuotes1}>Get Vaccinated.</Text>
-            <Text style={style1.vaccineQuotes}>Do your part.</Text>
-            <Text style={style1.vaccineQuotes}>Protect yourself.</Text>
-            <Text style={style1.vaccineQuotes}>Protect others.</Text>
-          </View>
         </View>
       </View>
+
+      
     </View>
   );
 }

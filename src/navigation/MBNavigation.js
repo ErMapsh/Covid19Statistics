@@ -6,7 +6,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import HomeScreen from '../Screens/HomeScreen';
 import Search from '../Screens/Search';
 import About from '../Screens/About';
-import Stat from '../Screens/Stat'
+import Stat from '../Screens/StatScreen'
 
 export default function MBNavigation() {
   const Tab = createMaterialBottomTabNavigator();
