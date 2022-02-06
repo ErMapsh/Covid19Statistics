@@ -15,14 +15,13 @@ const style = StyleSheet.create({
     borderBottomRightRadius: 40,
     paddingHorizontal: '5%',
     paddingVertical: '2%',
-    
   },
   NameFlagSickCall: {
     paddingHorizontal: '1.8%',
     flexDirection: 'column',
     justifyContent: 'space-evenly',
     // backgroundColor: 'red',
-    height: '80%'
+    height: '80%',
   },
   StatFlag: {
     flexDirection: 'row',
@@ -92,24 +91,74 @@ const style = StyleSheet.create({
   },
 });
 
+
 //style for second container
 const style1 = StyleSheet.create({
-  SecondContainer: {backgroundColor: 'green'},
+  SecondContainer: {
+    backgroundColor: 'white',
+    paddingHorizontal: '5%',
+    paddingVertical: '5%',
+    height: '55%',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+  },
 
   // Prevention and image part
-  Prevention: {},
-  PreventionText: {},
-  PreventionImageContainer: {},
-  ImageAndText: {},
-  ImgText: {},
-  ImgSize: {},
+
+  PreventionText: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: 'black',
+
+  },
+  PreventionImageContainer: {
+    flexDirection: 'row',
+    alignItems:'center',
+    justifyContent: 'center'
+
+  },
+  ImageAndText: {
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  ImgSize: {
+    width: 100,
+    height: 100,
+  },
+  ImgText: {
+    width: '70%',
+    textAlign: 'center',
+  },
 
   // vacination part
-  VaccinationContainer: {},
-  VaccineImgSize: {},
-  textArea: {},
-  vaccineQuotes1: {},
-  vaccineQuotes: {},
+  VaccinationContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    backgroundColor: '#54BAB9',
+    borderRadius: 25,
+    alignItems: 'center',
+
+    
+  },
+  VaccineImgSize: {
+    width: 110,
+    height: 110,
+  },
+  textArea: {
+    flexDirection:'column',
+    justifyContent: 'center',
+    alignItems: 'center', 
+  },
+  vaccineQuotes1: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: 'white',
+  },
+  vaccineQuotes: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    color: '#D3DEDC'
+  },
 });
 
 export {style, style1};
