@@ -91,7 +91,6 @@ const style = StyleSheet.create({
   },
 });
 
-
 //style for second container
 const style1 = StyleSheet.create({
   SecondContainer: {
@@ -104,18 +103,15 @@ const style1 = StyleSheet.create({
   },
 
   // Prevention and image part
-
   PreventionText: {
     fontSize: 22,
     fontWeight: 'bold',
     color: 'black',
-
   },
   PreventionImageContainer: {
     flexDirection: 'row',
-    alignItems:'center',
-    justifyContent: 'center'
-
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   ImageAndText: {
     flexDirection: 'column',
@@ -137,17 +133,15 @@ const style1 = StyleSheet.create({
     backgroundColor: '#54BAB9',
     borderRadius: 25,
     alignItems: 'center',
-
-    
   },
   VaccineImgSize: {
     width: 110,
     height: 110,
   },
   textArea: {
-    flexDirection:'column',
+    flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center', 
+    alignItems: 'center',
   },
   vaccineQuotes1: {
     fontSize: 20,
@@ -157,7 +151,7 @@ const style1 = StyleSheet.create({
   vaccineQuotes: {
     fontSize: 15,
     fontWeight: 'bold',
-    color: '#D3DEDC'
+    color: '#D3DEDC',
   },
 });
 

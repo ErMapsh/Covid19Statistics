@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {View, Text, Button} from 'react-native';
-import Card from '../component/Card';
+import {View, Text, Button, TouchableOpacity} from 'react-native';
 import {style, style1} from '../Stylesheet/StatStyle';
 import axios from 'axios';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -27,28 +26,60 @@ export default function StatScreen() {
     <View style={style.container}>
       {/* stat area */}
       <View style={style.firstContainer}>
-        <View style={{marginHorizontal: 12, marginVertical: 8}}>
+        <View style={style.barAndBell}>
           <Ionicons name="reorder-two" size={35} color={'white'} />
+          <Ionicons name="notifications" size={25} color={'white'} />
         </View>
 
-        {/* Statistics heading */}
-        <View style={style.stats}>
+        <View style={style.HeadingButtonCards}>
+          {/* Statistics heading */}
           <View>
-            <Text style={style.StatText}>Statistics</Text>
+            <Text style={style.HeadingText}>Statistics</Text>
           </View>
-          <View></View>
-        </View>
 
-        {/* Global and My Country Button */}
-        <View style={style.GlobalCountry}>
-          <View style={style.MyCountryBtn}>
-            <Text>My Country</Text>
+          {/* Button */}
+          <View style={style.MyCountryGlobal}>
+            <TouchableOpacity>
+              <Text style={style.btn}>MyCountry</Text>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Text style={style.btn}>Global</Text>
+            </TouchableOpacity>
           </View>
-          <View style={style.MyGlobalBtn}>
-            <Text>Global</Text>
+
+          {/* Information in boxes */}
+          <View style={style.StatContainer}>
+            <View>
+              <Text style={{textAlign: 'center'}}>Total</Text>
+            </View>
+
+            <View style={style.twoBox}>
+              <View style={style.firstBox}>
+                <Text style={style.boxesStatText}>Affected {'\n'} </Text>
+                <Text style={style.boxesStatText1}>{Data.cases}</Text>
+              </View>
+              <View style={style.SecondBox}>
+                <Text style={style.boxesStatText}>Deaths {'\n'} </Text>
+                <Text style={style.boxesStatText1}>{Data.deaths}</Text>
+              </View>
+            </View> 
+
+            <View style={style.ThreeBox}>
+              <View style={style.thirdBox}>
+                <Text style={style.threeBoxText}>Recovered</Text>
+                <Text style={style.threeBoxText1}>{Data.recovered}</Text>
+              </View>
+              <View style={style.fourthBox}>
+                <Text style={style.threeBoxText}>Active</Text>
+                <Text style={style.threeBoxText1}>{Data.active}</Text>
+              </View>
+              <View style={style.fifthBox}>
+                <Text style={style.threeBoxText}>Deaths</Text>
+                <Text style={style.threeBoxText1}>{Data.deaths}</Text>
+              </View>
+            </View>
           </View>
         </View>
-        
       </View>
 
       {/* map area */}
