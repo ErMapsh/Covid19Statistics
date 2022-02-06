@@ -15,7 +15,7 @@ export default function StatScreen() {
   const fetchApi = async () => {
     try {
       const response = await axios.get(url);
-      // console.log(response.data);
+      // console.log(response.data)
       setData(response.data);
     } catch (err) {
       console.log(err);
@@ -24,66 +24,75 @@ export default function StatScreen() {
 
   return (
     <View style={style.container}>
-      {/* stat area */}
-      <View style={style.firstContainer}>
-        <View style={style.barAndBell}>
-          <Ionicons name="reorder-two" size={35} color={'white'} />
-          <Ionicons name="notifications" size={25} color={'white'} />
-        </View>
+      <View style={style.FirstContainer}>
+        <Ionicons name="reorder-two" size={35} color={'white'} style={{}} />
 
-        <View style={style.HeadingButtonCards}>
-          {/* Statistics heading */}
-          <View>
-            <Text style={style.HeadingText}>Statistics</Text>
+        <View style={style.StatBtnStats}>
+          {/* heading */}
+          <View
+          // style={{borderColor: 'black', borderWidth: 1, height: '10%'}}
+          >
+            <Text style={style.StatHeading}>Statistics</Text>
           </View>
 
           {/* Button */}
-          <View style={style.MyCountryGlobal}>
-            <TouchableOpacity>
-              <Text style={style.btn}>MyCountry</Text>
+          <View style={style.TwoBtn}>
+            <TouchableOpacity style={{width: '48%'}}>
+              <Text style={style.Btn}>MyCountry</Text>
             </TouchableOpacity>
-            <TouchableOpacity>
-              <Text style={style.btn}>Global</Text>
+            <TouchableOpacity style={{width: '48%'}}>
+              <Text style={style.Btn}>Global</Text>
             </TouchableOpacity>
           </View>
 
-          {/* Information in boxes */}
-          <View style={style.StatContainer}>
-            <View>
-              <Text style={{textAlign: 'center'}}>Total</Text>
+          {/* today Yesterday Total */}
+          <View style={style.DaysVariant}>
+            <TouchableOpacity>
+              <Text style={{color: 'white', fontWeight: 'bold'}}>Total</Text>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Text>Today</Text>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Text>Yesterday</Text>
+            </TouchableOpacity>
+          </View>
+
+          {/* Two stat box */}
+          <View style={style.TwoStatContainer}>
+            <View style={style.firstStat}>
+              <Text style={style.StatBoxHeading}>Affected{'\n'} </Text>
+              <Text style={style.StatBoxCount}>{Data.cases}</Text>
             </View>
 
-            <View style={style.twoBox}>
-              <View style={style.firstBox}>
-                <Text style={style.boxesStatText}>Affected {'\n'} </Text>
-                <Text style={style.boxesStatText1}>{Data.cases}</Text>
-              </View>
-              <View style={style.SecondBox}>
-                <Text style={style.boxesStatText}>Deaths {'\n'} </Text>
-                <Text style={style.boxesStatText1}>{Data.deaths}</Text>
-              </View>
-            </View> 
+            <View style={style.secondStat}>
+              <Text style={style.StatBoxHeading}>Deaths{'\n'} </Text>
+              <Text style={style.StatBoxCount}>{Data.deaths}</Text>
+            </View>
+          </View>
 
-            <View style={style.ThreeBox}>
-              <View style={style.thirdBox}>
-                <Text style={style.threeBoxText}>Recovered</Text>
-                <Text style={style.threeBoxText1}>{Data.recovered}</Text>
-              </View>
-              <View style={style.fourthBox}>
-                <Text style={style.threeBoxText}>Active</Text>
-                <Text style={style.threeBoxText1}>{Data.active}</Text>
-              </View>
-              <View style={style.fifthBox}>
-                <Text style={style.threeBoxText}>Deaths</Text>
-                <Text style={style.threeBoxText1}>{Data.deaths}</Text>
-              </View>
+          {/* three stat box */}
+          <View style={style.ThreeStatContainer}>
+            <View style={style.thirdStat}>
+              <Text style={style.StatBoxHeading}>Recovered {'\n'}</Text>
+              <Text style={style.StatBoxCount}>{Data.recovered}</Text>
+            </View>
+
+            <View style={style.fourthStat}>
+              <Text style={style.StatBoxHeading}>Active {'\n'}</Text>
+              <Text style={style.StatBoxCount}>{Data.active}</Text>
+            </View>
+
+            <View style={style.fifthStat}>
+              <Text style={style.StatBoxHeading}>Serious {'\n'}</Text>
+              <Text style={style.StatBoxCount}>{Data.critical}</Text>
             </View>
           </View>
         </View>
       </View>
 
-      {/* map area */}
-      <View style={style1.secondContainer}></View>
+      {/* Second container */}
+      <View></View>
     </View>
   );
 }

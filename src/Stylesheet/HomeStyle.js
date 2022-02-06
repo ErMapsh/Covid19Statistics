@@ -9,7 +9,7 @@ const style = StyleSheet.create({
 
   //first container
   firstContainer: {
-    backgroundColor: '#54BAB9',
+    backgroundColor: '#279E97',
     height: '45%',
     borderBottomLeftRadius: 40,
     borderBottomRightRadius: 40,
@@ -130,7 +130,7 @@ const style1 = StyleSheet.create({
   VaccinationContainer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    backgroundColor: '#54BAB9',
+    backgroundColor: '#279E97',
     borderRadius: 25,
     alignItems: 'center',
   },
