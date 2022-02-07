@@ -12,8 +12,9 @@ const style = StyleSheet.create({
   StatBtnStats: {
     justifyContent: 'space-between',
     paddingHorizontal: '2%',
+    paddingVertical: '1%',
     // backgroundColor: 'red',
-    height: '80%'
+    height: '85%'
   },
   StatHeading: {
     color: '#FBF8F1',

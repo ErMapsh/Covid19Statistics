@@ -3,10 +3,17 @@ import {View, Text, Button, TouchableOpacity} from 'react-native';
 import {style, style1} from '../Stylesheet/StatStyle';
 import axios from 'axios';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import GraphChart from '../component/GraphChart';
 
 export default function StatScreen() {
   const [Data, setData] = useState([]);
+  //for india 
   const url = 'https://disease.sh/v3/covid-19/countries/India';
+  const YesterdayUrl ='https://disease.sh/v3/covid-19/countries/india?yesterday=true&strict=true';
+
+  //for gloable
+  const gloableUrl = 'https://disease.sh/v3/covid-19/all'
+  const gloableUrlYesterday = 'https://disease.sh/v3/covid-19/all?yesterday=true'
 
   useEffect(() => {
     fetchApi();
@@ -25,7 +32,7 @@ export default function StatScreen() {
   return (
     <View style={style.container}>
       <View style={style.FirstContainer}>
-        <Ionicons name="reorder-two" size={35} color={'white'} style={{}} />
+        <Ionicons name="reorder-two" size={35} color={'white'} />
 
         <View style={style.StatBtnStats}>
           {/* heading */}
@@ -41,7 +48,10 @@ export default function StatScreen() {
               <Text style={style.Btn}>MyCountry</Text>
             </TouchableOpacity>
             <TouchableOpacity style={{width: '48%'}}>
-              <Text style={style.Btn}>Global</Text>
+              <Text
+                style={{textAlign: 'center', padding: '6%', borderRadius: 25,fontWeight: 'bold',}}>
+                Global
+              </Text>
             </TouchableOpacity>
           </View>
 
@@ -92,7 +102,10 @@ export default function StatScreen() {
       </View>
 
       {/* Second container */}
-      <View></View>
+      <View style={{backgroundColor: 'white', borderTopRightRadius:25, borderTopLeftRadius:25, height: '35%', justifyContent:'space-between', alignItems: 'center'}}>
+        <Text style={{color: 'black', fontSize: 20, fontWeight: 'bold'}}>Daily New Cases</Text>
+        <GraphChart/>
+      </View>
     </View>
   );
 }
