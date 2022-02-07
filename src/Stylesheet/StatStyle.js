@@ -29,7 +29,7 @@ const style = StyleSheet.create({
     backgroundColor: 'rgba(255,255,255, 0.4)',
     borderRadius: 25,
     padding: '1%',
-    height: '15%',
+    height: '13%',
   },
 
   //for MyCountry and Global btn

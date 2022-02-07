@@ -1,4 +1,4 @@
-import React, {useEffect, useContext, } from 'react';
+import React, {useEffect, useContext} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import {style, style1} from '../Stylesheet/StatStyle';
 
@@ -8,7 +8,7 @@ import AppContext from '../Context/AppContext';
 
 export default function StatScreen() {
   const context = useContext(AppContext); //using context
-  const {fetchApi, Data, HandleOnMyCountry, HandleOnGlobal, BtnValue} = context; //destructuring 
+  const {fetchApi, Data, HandleOnMyCountry, HandleOnGlobal, BtnValue} = context; //destructuring
 
   //effect use for at least one time to run fetch
   useEffect(() => {
@@ -25,7 +25,6 @@ export default function StatScreen() {
           <View>
             <Text style={style.StatHeading}>Statistics</Text>
           </View>
-
 
           {/* Button */}
           <View style={style.TwoBtn}>
@@ -46,7 +45,6 @@ export default function StatScreen() {
             </TouchableOpacity>
           </View>
 
-
           {/* today Yesterday Total */}
           {/* <View style={style.DaysVariant}>
             <TouchableOpacity>
@@ -60,38 +58,39 @@ export default function StatScreen() {
             </TouchableOpacity>
           </View> */}
 
-          {/* Two stat box */}
-          <View style={style.TwoStatContainer}>
-            <View style={style.firstStat}>
-              <Text style={style.StatBoxHeading}>Affected{'\n'} </Text>
-              <Text style={style.StatBoxCount}>{Data.cases}</Text>
+            {/* Two stat box */}
+            <View style={style.TwoStatContainer}>
+              <View style={style.firstStat}>
+                <Text style={style.StatBoxHeading}>Affected{'\n'} </Text>
+                <Text style={style.StatBoxCount}>{Data.cases}</Text>
+              </View>
+
+              <View style={style.secondStat}>
+                <Text style={style.StatBoxHeading}>Deaths{'\n'} </Text>
+                <Text style={style.StatBoxCount}>{Data.deaths}</Text>
+              </View>
             </View>
 
-            <View style={style.secondStat}>
-              <Text style={style.StatBoxHeading}>Deaths{'\n'} </Text>
-              <Text style={style.StatBoxCount}>{Data.deaths}</Text>
-            </View>
-          </View>
+            {/* three stat box */}
+            <View style={style.ThreeStatContainer}>
+              <View style={style.thirdStat}>
+                <Text style={style.StatBoxHeading}>Recovered {'\n'}</Text>
+                <Text style={style.StatBoxCount}>{Data.recovered}</Text>
+              </View>
 
-          {/* three stat box */}
-          <View style={style.ThreeStatContainer}>
-            <View style={style.thirdStat}>
-              <Text style={style.StatBoxHeading}>Recovered {'\n'}</Text>
-              <Text style={style.StatBoxCount}>{Data.recovered}</Text>
-            </View>
+              <View style={style.fourthStat}>
+                <Text style={style.StatBoxHeading}>Active {'\n'}</Text>
+                <Text style={style.StatBoxCount}>{Data.active}</Text>
+              </View>
 
-            <View style={style.fourthStat}>
-              <Text style={style.StatBoxHeading}>Active {'\n'}</Text>
-              <Text style={style.StatBoxCount}>{Data.active}</Text>
-            </View>
-
-            <View style={style.fifthStat}>
-              <Text style={style.StatBoxHeading}>Serious {'\n'}</Text>
-              <Text style={style.StatBoxCount}>{Data.critical}</Text>
+              <View style={style.fifthStat}>
+                <Text style={style.StatBoxHeading}>Serious {'\n'}</Text>
+                <Text style={style.StatBoxCount}>{Data.critical}</Text>
+              </View>
             </View>
           </View>
         </View>
-      </View>
+    
 
       {/* Second container */}
       <View style={style1.secondContainer}>
