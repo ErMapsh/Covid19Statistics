@@ -25,17 +25,32 @@ const style = StyleSheet.create({
   TwoBtn: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
     backgroundColor: 'rgba(255,255,255, 0.4)',
     borderRadius: 25,
     padding: '1%',
+    height: '15%',
   },
+
+  //for MyCountry and Global btn
   Btn:{
     backgroundColor: 'white',
     textAlign: 'center',
     padding: '6%',
-    borderRadius: 25, 
+    borderRadius: 35, 
     fontWeight: 'bold',
+    width: '100%',
   },
+  Btn1:{
+    // backgroundColor: 'white',
+    textAlign: 'center',
+    padding: '6%',
+    borderRadius: 35, 
+    fontWeight: 'bold',
+    width: '100%',
+  },
+
+
   DaysVariant:{
     flexDirection: 'row', 
     justifyContent: 'space-evenly'
@@ -78,30 +93,44 @@ const style = StyleSheet.create({
     width: '30%',
     height: '100%',
     backgroundColor: '#00e673',
-    padding: '4%',
+    padding: '2.5%',
     borderRadius: 8,
   },
   fourthStat:{
     width: '30%',
     height: '100%',
     backgroundColor: '#66b3ff',
-    padding: '4%',
+    padding: '2.5%',
     borderRadius: 8,
   },
   fifthStat:{
     width: '30%',
     height: '100%',
     backgroundColor: '#36B9B1',
-    padding: '5%',
+    padding: '2.5%',
     borderRadius: 8,
   },
  
 });
 
-// const style1 = StyleSheet.create({
-// });
+const style1 = StyleSheet.create({
+  secondContainer:{
+    backgroundColor: 'white', 
+    borderTopRightRadius:25, 
+    borderTopLeftRadius:25, 
+    height: '35%', 
+    justifyContent:'space-between', 
+    alignItems: 'center',
+  },
+  secondContainerHeadline:{
+    color: 'black', 
+    fontSize: 20, 
+    fontWeight: 'bold',
+  }
+  
+});
 
 export {
   style,
-  // style1
+  style1
 };
