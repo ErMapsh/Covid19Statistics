@@ -102,8 +102,8 @@ export default function StatScreen() {
       </View>
 
       {/* Second container */}
-      <View style={{backgroundColor: 'white', borderTopRightRadius:25, borderTopLeftRadius:25, height: '35%', justifyContent:'space-between', alignItems: 'center'}}>
-        <Text style={{color: 'black', fontSize: 20, fontWeight: 'bold'}}>Daily New Cases</Text>
+      <View style={{backgroundColor: 'white', borderTopRightRadius:25, borderTopLeftRadius:25, height: '35%', justifyContent:'space-around', alignItems: 'center'}}>
+        <Text style={{color: 'black', fontSize: 20, fontWeight: 'bold', padding: '1%'}}>Daily New Cases</Text>
         <GraphChart/>
       </View>
     </View>
