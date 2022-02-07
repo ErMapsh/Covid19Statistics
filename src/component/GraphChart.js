@@ -13,7 +13,6 @@ import { style } from '../Stylesheet/StatStyle';
 
 export default function GraphChart() {
   return (
-    <View>
       <LineChart
         data={{
           labels: ['January', 'February', 'March', 'April', 'May', 'June'],
@@ -57,6 +56,5 @@ export default function GraphChart() {
           borderRadius: 16,
         }}
       />
-    </View>
   );
 }

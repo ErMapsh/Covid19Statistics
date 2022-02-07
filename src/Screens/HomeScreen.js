@@ -91,7 +91,7 @@ export default function HomeScreen() {
                 source={require('../img/new2/face-mask.png')}
                 style={style1.ImgSize}
               />
-              <Text style={style1.ImgText}>Avoid close contact</Text>
+              <Text style={style1.ImgText}> Wear a facemask</Text>
             </View> 
 
           <View style={style1.ImageAndText}>
@@ -107,7 +107,7 @@ export default function HomeScreen() {
                 source={require('../img/new2/social-distancing.png')}
                 style={style1.ImgSize}
               />
-              <Text style={style1.ImgText}>Wear a facemask </Text>
+              <Text style={style1.ImgText}>Avoid close contact</Text>
             </View>
         </View>
 
