@@ -10,7 +10,6 @@ const style = StyleSheet.create({
     paddingVertical: '2%',
   },
   StatBtnStats: {
-    justifyContent: 'space-between',
     paddingHorizontal: '2%',
     paddingVertical: '1%',
     // backgroundColor: 'red',
@@ -21,6 +20,7 @@ const style = StyleSheet.create({
     // justifyContent: 'center',
     fontSize: 23,
     fontWeight: 'bold',
+    paddingVertical: '3%'
   },
   TwoBtn: {
     flexDirection: 'row',
@@ -28,32 +28,40 @@ const style = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'rgba(255,255,255, 0.4)',
     borderRadius: 25,
-    padding: '1%',
-    height: '13%',
+    padding: '0.7%',
+    height: '14%',
   },
 
   //for MyCountry and Global btn
   Btn:{
     backgroundColor: 'white',
     textAlign: 'center',
-    padding: '6%',
+    margin: '1%',
     borderRadius: 35, 
     fontWeight: 'bold',
-    width: '100%',
+    width: '98%',
+    height: '90%',
+    textAlignVertical: 'center',
+    alignItems: 'center',
   },
   Btn1:{
     // backgroundColor: 'white',
     textAlign: 'center',
-    padding: '6%',
+    margin: '1%',
     borderRadius: 35, 
     fontWeight: 'bold',
-    width: '100%',
+    width: '98%',
+    height: '90%',
+    textAlignVertical: 'center',
+    alignItems: 'center',
   },
-
 
   DaysVariant:{
     flexDirection: 'row', 
-    justifyContent: 'space-evenly'
+    justifyContent: 'space-evenly',
+    alignItems:'center',
+    // paddingVertical: '3%',
+    // backgroundColor: 'white',
   },
   StatBoxHeading:{
     fontWeight: 'bold',
@@ -67,7 +75,8 @@ const style = StyleSheet.create({
   //two stat
   TwoStatContainer:{
     flexDirection: 'row',
-     justifyContent: 'space-between',
+    justifyContent: 'space-between',  
+    height: '32%',
   },
   firstStat:{
     width: '45%',
@@ -87,7 +96,8 @@ const style = StyleSheet.create({
   //three stat container
   ThreeStatContainer:{
     flexDirection: 'row', 
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    height: '32%',
   },
   thirdStat:{
     width: '30%',
@@ -119,7 +129,7 @@ const style1 = StyleSheet.create({
     borderTopRightRadius:25, 
     borderTopLeftRadius:25, 
     height: '35%', 
-    justifyContent:'space-between', 
+    justifyContent:'space-around', 
     alignItems: 'center',
   },
   secondContainerHeadline:{

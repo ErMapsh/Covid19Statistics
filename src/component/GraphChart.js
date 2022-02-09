@@ -1,60 +1,47 @@
 import React from 'react';
-import {View, Dimensions} from 'react-native';
-import * as Svg from 'react-native-svg';
-import {
-  LineChart,
-  BarChart,
-  PieChart,
-  ProgressChart,
-  ContributionGraph,
-  StackedBarChart,
-} from 'react-native-chart-kit';
-import { style } from '../Stylesheet/StatStyle';
+import LineChartDev from './LineChartDev';
+
+// import AppContext from '../Context/AppContext';
+// const Context = useContext(AppContext);
+// const {GraphChartFetch, GraphData} = Context;
 
 export default function GraphChart() {
+  // const [datasource, setdatasource] = useState([{
+  //   1: 1,
+  //   2: 2,
+  //   3: 3,
+  //   4: 4,
+  //   5: 5,
+  //   6: 6,
+  //   7: 7,
+  //   8: 8,
+  //   9: 9,
+  //   10: 10,
+  //   11: 11,
+  //   12: 12,
+  //   13: 13,
+  //   14: 14,
+  //   15: 15,
+  //   16: 16,
+  //   17: 17,
+  //   18: 18,
+  //   19: 19,
+  //   20: 20,
+  //   21: 21,
+  //   22: 22,
+  //   23: 23,
+  //   24: 24,
+  //   25: 25,
+  //   26: 26,
+  //   27: 27,
+  //   28: 28,
+  //   29: 29,
+  //   30: 30,
+  // }]);
+
   return (
-      <LineChart
-        data={{
-          labels: ['January', 'February', 'March', 'April', 'May', 'June'],
-          datasets: [
-            {
-              data: [
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-              ],
-            },
-          ],
-        }}
-        width={Dimensions.get('window').width - 20} // from react-native
-        height={180}
-        yAxisLabel="$"
-        yAxisSuffix="k"
-        yAxisInterval={1} // optional, defaults to 1
-        chartConfig={{
-          backgroundColor: 'white',
-        //   backgroundGradientFrom: '#fb8c00',
-        //   backgroundGradientTo: '#ffa726',
-          decimalPlaces: 2, // optional, defaults to 2dp
-          color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-          labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-          style: {
-            borderRadius: 16,
-          },
-          propsForDots: {
-            r: '6',
-            strokeWidth: '2',
-            stroke: '#ffa726',
-          },
-        }}
-        bezier
-        style={{
-          marginVertical: 8,
-          borderRadius: 16,
-        }}
-      />
+    <>
+      <LineChartDev />
+    </>
   );
 }

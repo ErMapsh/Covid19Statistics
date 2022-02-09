@@ -13,13 +13,13 @@ export default function MBNavigation() {
   return (
     
     <Tab.Navigator 
-    initialRouteName="Home"
+    // initialRouteName="Home"
      barStyle={{ backgroundColor: 'white', color: '#4FBDBA'}}>
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Home"
         component={HomeScreen}
         options={{tabBarIcon: () => <SetupIcon name="home" />}}
-      />
+      /> */}
       <Tab.Screen
         name="Stat"
         component={Stat}
