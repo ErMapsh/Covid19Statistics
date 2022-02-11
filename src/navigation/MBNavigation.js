@@ -20,21 +20,21 @@ export default function MBNavigation() {
         component={HomeScreen}
         options={{tabBarIcon: () => <SetupIcon name="home" />}}
       /> */}
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Stat"
         component={Stat}
         options={{tabBarIcon: () => <SetupIcon name="stats-chart" />}}
-      />
+      /> */}
       <Tab.Screen
         name="Search"
         component={Search}
         options={{tabBarIcon: () => <SetupIcon name="search-circle" />}}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="About"
         component={About}
         options={{tabBarIcon: () => <SetupIcon name="alert-circle" />}}
-      />
+      /> */}
     </Tab.Navigator>
   );
 }

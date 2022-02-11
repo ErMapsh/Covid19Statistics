@@ -66,15 +66,15 @@ export default function LineChartDev() {
       labels: [],
       datasets: [
         {
-          // data: [
-          //   Math.random() * 100,
-          //   Math.random() * 100,
-          //   Math.random() * 100,
-          //   Math.random() * 100,
-          //   Math.random() * 100,
-          //   Math.random() * 100,
-          // ],
-          data:  Data
+          data: [
+            Math.random() * 100,
+            Math.random() * 100,
+            Math.random() * 100,
+            Math.random() * 100,
+            Math.random() * 100,
+            Math.random() * 100,
+          ],
+          // data:  Data
 
         },
       ],
