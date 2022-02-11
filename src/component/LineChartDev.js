@@ -8,6 +8,7 @@ import {
   ActivityIndicator,
   Dimensions,
 } from 'react-native';
+import axios from 'axios';
 
 // export default class LineChartDev extends Component {
 
@@ -43,29 +44,21 @@ import {
 // }
 
 export default function LineChartDev() {
-  const [data, setdata] = useState({});
-
-
+  const [Data, setData] = useState([]);
+ 
   // we will use async/await to fetch this data
-  async function getData() {
-    const response = await fetch(
-      'https://disease.sh/v3/covid-19/historical/india?lastdays=30',
-    );
-    const data = await response.json();
-    setdata(data.timeline.cases);
+  const getData = async()=>{
+    const response = await axios.get('https://disease.sh/v3/covid-19/historical/india?lastdays=30');
+    const valuesInarray = Object.values(response.data.timeline.cases)//returns array
+    // console.log(valuesInarray)
+    setData(valuesInarray);
   }
 
   useEffect(() => {
     getData();
   }, []);
 
-  
-  // console.log('data', data);
-  //getting values only in list
-  const values = Object.values(data)
-  console.log(values)
  
-  
   return(
   <View>
   <LineChart
@@ -73,14 +66,16 @@ export default function LineChartDev() {
       labels: [],
       datasets: [
         {
-          data: [
-            Math.random() * 100,
-            Math.random() * 100,
-            Math.random() * 100,
-            Math.random() * 100,
-            Math.random() * 100,
-            Math.random() * 100,
-          ],
+          // data: [
+          //   Math.random() * 100,
+          //   Math.random() * 100,
+          //   Math.random() * 100,
+          //   Math.random() * 100,
+          //   Math.random() * 100,
+          //   Math.random() * 100,
+          // ],
+          data:  Data
+
         },
       ],
     }}

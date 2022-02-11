@@ -1,5 +1,6 @@
 import React from 'react';
 import LineChartDev from './LineChartDev';
+import LineChartGrapsh from './LineChartGrapsh';
 
 // import AppContext from '../Context/AppContext';
 // const Context = useContext(AppContext);
@@ -42,6 +43,7 @@ export default function GraphChart() {
   return (
     <>
       <LineChartDev />
+      {/* <LineChartGrapsh/> */}
     </>
   );
 }

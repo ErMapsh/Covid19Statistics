@@ -1,98 +1,36 @@
-// import axios from 'axios';
+const data = {
+    "1/11/22": 35875790,
+    "1/12/22": 36317927,
+    "1/13/22": 36317927,
+    "1/14/22": 36850962,
+    "1/15/22": 37122164,
+    "1/16/22": 37380253,
+    "1/17/22": 37618271,
+    "1/18/22": 37901241,
+    "1/19/22": 38218773,
+    "1/20/22": 38566027,
+    "1/21/22": 38903731,
+    "1/22/22": 39237264,
+    "1/23/22": 39543328,
+    "1/24/22": 39799202,
+    "1/25/22": 40085116,
+    "1/26/22": 40371500,
+    "1/27/22": 40622709,
+    "1/28/22": 40858241,
+    "1/29/22": 41092522,
+    "1/30/22": 41302440,
+    "1/31/22": 41469499,
+    "2/1/22": 41630885,
+    "2/2/22": 41803318,
+    "2/3/22": 41952712,
+    "2/4/22": 42080664,
+    "2/5/22": 42188138,
+    "2/6/22": 42272014,
+    "2/7/22": 42339611,
+    "2/8/22": 42410976,
+    "2/9/22": 42478060
+    }
 
 
 
-// class LineChartDev extends Component {
-//   state = {
-//     datasource:[]
-//   };
-  
-
-//   LineChart_Dynamic = () => {
-//     if (this.state.datasource) {
-//       if (this.state.datasource.length) {
-//         return (
-//           <View>
-//             <Text>Bezier Line Chart</Text>
-//             <LineChart
-//               data={{
-//                 labels: [],
-//                 datasets: [
-//                   {
-//                     data: this.state.datasource.map(item => {
-//                       return item.value;
-//                     }),
-//                   },
-//                 ],
-//               }}
-//               width={Dimensions.get('window').width} // from react-native
-//               height={220}
-//               yAxisLabel="students"
-//               yAxisSuffix="k"
-//               yAxisInterval={1} // optional, defaults to 1
-//               chartConfig={{
-//                 backgroundColor: '#e26a00',
-//                 backgroundGradientFrom: '#fb8c00',
-//                 backgroundGradientTo: '#ffa726',
-//                 decimalPlaces: 2, // optional, defaults to 2dp
-//                 color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-//                 labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-//                 style: {
-//                   borderRadius: 16,
-//                 },
-//                 propsForDots: {
-//                   r: '6',
-//                   strokeWidth: '2',
-//                   stroke: '#ffa726',
-//                 },
-//               }}
-//               bezier
-//               style={{
-//                 marginVertical: 8,
-//                 borderRadius: 16,
-//               }}
-//             />
-//           </View>
-//         );
-//       } else {
-//         return (
-//           <View
-//             style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
-//             <ActivityIndicator size="large" />
-//           </View>
-//         );
-//       }
-//     } else {
-//       return (
-//         <View style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
-//           <Text>no data found</Text>
-//         </View>
-//       );
-//     }
-//   };
-
-//   //fetching data from here
-//   FetchData = async () => {
-//     try {
-//       const response = await fetch('https://disease.sh/v3/covid-19/historical/india?lastdays=30');
-//       const json = await response.json();
-//       console.log(json.timeline.cases)
-//       this.setState({datasource : json.timeline.cases});
-//       console.log(this.datasource)
-
-//     } catch (err) {
-//       console.log(err);
-//     }
-//   };
-
-
-//   /*componentDidMount will execute the function when the screen is mounted.*/
-//   componentDidMount = () => {
-//     this.FetchData();
-//   };
-
-//   render() {
-    
-//     return <View>{this.LineChart_Dynamic()}</View>;
-//   }
-// }
+console.log(Object.values(data))
