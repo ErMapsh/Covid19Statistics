@@ -1,14 +1,18 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
+import AppState from './src/Context/AppState';
 
-
-//importing 
+//importing
 import StackNavi from './src/navigation/StackNavi';
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <StackNavi/>
-    </NavigationContainer>
+    <>
+      <AppState>
+        <NavigationContainer>
+          <StackNavi />
+        </NavigationContainer>
+      </AppState>
+    </>
   );
 }

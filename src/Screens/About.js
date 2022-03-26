@@ -5,7 +5,9 @@ import { style } from '../Stylesheet/style'
 export default function About() {
   return (
     <View style={style.container}>
-      <Text style={style.text}>About</Text>
+      <Text style={style.text}>Info about this app</Text>
     </View>
+    
   );
+
 }
