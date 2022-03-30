@@ -6,10 +6,10 @@ import AppContext from '../Context/AppContext'
 
 export default function LineChartDev() {
   const context = useContext(AppContext);
-  const { GraphData, HandleOnMyCountry } = context;
+  const { GraphData, getDataCountry } = context;
 
   useEffect(() => {
-    HandleOnMyCountry();
+    getDataCountry();
   }, [])
 
   return (

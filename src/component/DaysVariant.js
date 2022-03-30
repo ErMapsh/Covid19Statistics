@@ -9,12 +9,12 @@ export default function DaysVariant() {
         <TouchableOpacity>
           <Text style={{color: 'white', fontWeight: 'bold'}}>Total</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
+        {/* <TouchableOpacity>
           <Text>Today</Text>
         </TouchableOpacity>
         <TouchableOpacity>
           <Text>Yesterday</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
     </View>
   );
