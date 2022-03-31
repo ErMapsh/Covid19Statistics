@@ -57,6 +57,9 @@ export default function About() {
           </View>
         </View>)
       })}
+      <View>
+        <Text>Version: @1.0.0</Text>
+      </View>
     </SafeAreaView>
 
 
