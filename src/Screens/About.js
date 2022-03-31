@@ -58,7 +58,7 @@ export default function About() {
         </View>)
       })}
       <View>
-        <Text>Version: @1.0.0</Text>
+        <Text style={{color: 'white', fontWeight: 'bold'}}>Version: @1.0.0</Text>
       </View>
     </SafeAreaView>
 

@@ -124,6 +124,7 @@ const style1 = StyleSheet.create({
   ImgText: {
     width: '70%',
     textAlign: 'center',
+    color: 'black'
   },
 
   // vacination part
