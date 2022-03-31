@@ -39,7 +39,7 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     borderRadius: 25,
-    width: '26%',
+    width: '31%',
     height: '120%',
   },
   CountryImg: {
@@ -118,8 +118,8 @@ const style1 = StyleSheet.create({
     alignItems: 'center',
   },
   ImgSize: {
-    width: 100,
-    height: 100,
+    width: 85,
+    height: 85,
   },
   ImgText: {
     width: '70%',

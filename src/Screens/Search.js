@@ -11,9 +11,8 @@ import {
   Modal
 } from 'react-native';
 import axios from 'axios';
-import { Card } from 'react-native-paper';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { black } from 'react-native-paper/lib/typescript/styles/colors';
+
 
 export default function Search() {
   const [DateByApi, setDateByApi] = useState('')
@@ -318,9 +317,8 @@ export default function Search() {
   }
   return (
     <View style={style.main} >
-
       {/* Text Input */}
-      <Modal visible={modalVisible} animationType='slide'>
+      <Modal visible={modalVisible} animationType='slide' transparent={true}>
         <View style={style.ModalBackground}>
 
           <View style={{ backgroundColor: 'white', padding: 20, borderRadius: 10, }}>
@@ -346,6 +344,7 @@ export default function Search() {
       <TextInput
         value={search}
         placeholder="Search Here"
+        placeholderTextColor="black"
         underlineColorAndroid="transparent"
         onChangeText={text => {
           SearchFilterFuntion(text);
@@ -360,10 +359,8 @@ export default function Search() {
           renderItem={({ item }) => (
 
             <View style={style.ctn}>
-              <TouchableOpacity onPress={() => { OpenModal(item) }}>
-                <Card style={style.cardContainer}>
+              <TouchableOpacity onPress={() => {OpenModal(item) }} style={style.   cardContainer}>
                   <Text style={[style.card, style.fontForstate]}>{item.state}</Text>
-                </Card>
               </TouchableOpacity>
             </View>
           )}
@@ -398,6 +395,8 @@ const style = StyleSheet.create({
   cardContainer: {
     margin: 8,
     width: Dimensions.get('window').width - 100,
+    backgroundColor: 'white',
+    borderRadius: 5,
   },
   ctn: {
     display: 'flex',
@@ -405,8 +404,9 @@ const style = StyleSheet.create({
     alignItems: 'center',
   },
   fontForstate: {
-    fontSize: 14,
-    fontWeight: 'bold'
+    fontSize: 15,
+    fontWeight: 'bold',
+    color: 'black'
   },
 
 
