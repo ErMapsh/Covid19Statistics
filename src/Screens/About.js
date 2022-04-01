@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, SafeAreaView, Dimensions, Linking } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, Dimensions, Linking, TouchableOpacity } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
 export default function About() {
@@ -36,8 +36,8 @@ export default function About() {
   const forLinkedin = (url) => {
     Linking.openURL(url);
   }
-  
-  const forMail = (url)=>{
+
+  const forMail = (url) => {
     Linking.openURL(`mailto:${url}`)
   }
 
@@ -51,14 +51,20 @@ export default function About() {
             <Text style={{ fontSize: 18, color: "black" }}>{item.name}</Text>
           </View>
           <View style={{ flexDirection: 'row', margin: 10, justifyContent: 'space-between', width: CustomWidth - 250 }}>
-            <Ionicons name='logo-github' size={26} color="black" onPress={() => { forGithub(item.github) }} />
-            <Ionicons name='logo-linkedin' size={26} color="black" onPress={() => { forLinkedin(item.linkedin) }} />
-            <Ionicons name='mail' size={26} color="black" onPress={() => { forMail(item.mail) }} />
+            <TouchableOpacity>
+              <Ionicons name='logo-github' size={26} color="black" onPress={() => { forGithub(item.github) }} />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Ionicons name='logo-linkedin' size={26} color="black" onPress={() => { forLinkedin(item.linkedin) }} />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Ionicons name='mail' size={26} color="black" onPress={() => { forMail(item.mail) }} />
+            </TouchableOpacity>
           </View>
         </View>)
       })}
       <View>
-        <Text style={{color: 'white', fontWeight: 'bold'}}>Version: @1.0.0</Text>
+        <Text style={{ color: 'white', fontWeight: 'bold' }}>Version: @1.0.0</Text>
       </View>
     </SafeAreaView>
 
