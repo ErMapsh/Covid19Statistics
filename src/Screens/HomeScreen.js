@@ -14,12 +14,8 @@ import call from 'react-native-phone-call';
 
 export default function HomeScreen() {
   //call
-  const args = {
-    number: '+911123978046', // String value with the number to call
-    prompt: false, // Optional boolean property. Determines if the user should be prompt prior to the call
-  };
   const OnPressCall = () => {
-    call(args).catch(console.error);
+    Linking.openURL(`tel:${+911123978046}`)
   };
 
   //site link
@@ -48,7 +44,7 @@ export default function HomeScreen() {
             {/* flag */}
             <View style={style.ImgContainer}>
               <CountryFlag isoCode="in" size={35} style={style.CountryImg} />
-              <Text style={{fontWeight: 'bold'}}>IND</Text>
+              <Text style={{fontWeight: 'bold', fontSize: 15, color: "black"}}>IND</Text>
             </View>
           </View>
 

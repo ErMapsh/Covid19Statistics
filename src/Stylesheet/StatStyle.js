@@ -1,4 +1,4 @@
-import {Dimensions, StyleSheet} from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 const style = StyleSheet.create({
   container: {
     flex: 1,
@@ -33,59 +33,61 @@ const style = StyleSheet.create({
   },
 
   //for MyCountry and Global btn
-  Btn:{
+  Btn: {
     backgroundColor: 'white',
     textAlign: 'center',
     margin: '1%',
-    borderRadius: 35, 
+    borderRadius: 35,
     fontWeight: 'bold',
     width: '98%',
     height: '90%',
     textAlignVertical: 'center',
     alignItems: 'center',
+    color: 'black',
   },
-  Btn1:{
+  Btn1: {
     // backgroundColor: 'white',
     textAlign: 'center',
     margin: '1%',
-    borderRadius: 35, 
+    borderRadius: 35,
     fontWeight: 'bold',
     width: '98%',
     height: '90%',
     textAlignVertical: 'center',
     alignItems: 'center',
+    color: 'black'
   },
 
-  DaysVariant:{
-    flexDirection: 'row', 
+  DaysVariant: {
+    flexDirection: 'row',
     justifyContent: 'space-evenly',
-    alignItems:'center',
+    alignItems: 'center',
     // paddingVertical: '3%',
     // backgroundColor: 'white',
   },
-  StatBoxHeading:{
+  StatBoxHeading: {
     fontWeight: 'bold',
     color: 'white'
   },
-  StatBoxCount:{
+  StatBoxCount: {
     fontWeight: 'bold',
     color: 'white',
     fontSize: 17,
   },
   //two stat
-  TwoStatContainer:{
+  TwoStatContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between',  
+    justifyContent: 'space-between',
     height: '32%',
   },
-  firstStat:{
+  firstStat: {
     width: '45%',
     height: '100%',
     backgroundColor: '#ffad33',
     padding: '3%',
     borderRadius: 8,
   },
-  secondStat:{
+  secondStat: {
     width: '45%',
     height: '100%',
     backgroundColor: '#ff4d4d',
@@ -94,51 +96,51 @@ const style = StyleSheet.create({
   },
 
   //three stat container
-  ThreeStatContainer:{
-    flexDirection: 'row', 
+  ThreeStatContainer: {
+    flexDirection: 'row',
     justifyContent: 'space-between',
     height: '32%',
   },
-  thirdStat:{
-    width: '30%',
+  thirdStat: {
+    width: '32%',
     height: '100%',
     backgroundColor: '#00e673',
     padding: '2.5%',
     borderRadius: 8,
   },
-  fourthStat:{
-    width: '30%',
+  fourthStat: {
+    width: '32%',
     height: '100%',
     backgroundColor: '#66b3ff',
     padding: '2.5%',
     borderRadius: 8,
   },
-  fifthStat:{
-    width: '30%',
+  fifthStat: {
+    width: '32%',
     height: '100%',
     backgroundColor: '#36B9B1',
     padding: '2.5%',
     borderRadius: 8,
   },
- 
+
 });
 
 const style1 = StyleSheet.create({
-  secondContainer:{
-    backgroundColor: 'white', 
-    borderTopRightRadius:25, 
-    borderTopLeftRadius:25, 
-    height: '35%', 
-    justifyContent:'space-around', 
+  secondContainer: {
+    backgroundColor: 'white',
+    borderTopRightRadius: 25,
+    borderTopLeftRadius: 25,
+    height: '35%',
+    justifyContent: 'space-around',
     alignItems: 'center',
   },
-  secondContainerHeadline:{
-    color: 'black', 
-    fontSize: 20, 
+  secondContainerHeadline: {
+    color: 'black',
+    fontSize: 20,
     fontWeight: 'bold',
     marginVertical: '4%'
   }
-  
+
 });
 
 export {
