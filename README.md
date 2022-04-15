@@ -17,7 +17,7 @@ Data is provided by https://disease.sh/v3/covid-19/countries/India as well as ht
 - npm install -g yarn
 - yarn add global react-native
 - yarn add global react-native-cli
-- react-native init ProjectName
+- yarn react-native run-android
 
 
 For Everyone
