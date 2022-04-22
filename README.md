@@ -1,6 +1,8 @@
 
 # Covid-19 Statistics based on location
 <img src="https://user-images.githubusercontent.com/78255828/163549939-2040ada5-5fdc-4b87-852f-6418999a32ee.png" width="300" height="300">
+
+## 💢Introduction
 Covid-19 Statistics based on location- React-Native project. The idea for this application came from mini project we did about predictions and visualization of virus at
 start of 2020, When covid-19 virus was new and there was no predictions about it. In
 that application we used machine learning algorithms to visualize the trends in covid-19
@@ -17,18 +19,6 @@ This app can give you real time updates on covid-19 based on the location you ha
 selected, also the historical records of that location regarding the covid-19.
 This app can be very helpful to gain incites about current covid-19 condition, And also
 with its user friendliness it can be used by anyone who has a smartphone.
-
-## 💢Introduction
-This application is use full for any one around the world to gain knowledge of current
-covid trends.
-This app works on bases of React-Native which is a open source UI software with
-JavaScript framework for writing real, naively creating mobile applications for iOS and
-Android And for the data collection part it uses rest AP-I’s.
-This types of app are easy to use and fast rendering. We can use the react components to render different parts so that we don’t have to render the whole page again,
-which reduces the load on users mobile.
-This app can give you real time updates on covid-19 based on the location you have
-selected, also the historical records of that location regarding the covid-19.
-
 
 ## 💢Methodology
 ### various Methods used to develop the Project:
