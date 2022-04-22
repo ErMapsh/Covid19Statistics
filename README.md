@@ -1,5 +1,6 @@
 
 # Covid-19 Statistics based on location
+<img src="https://user-images.githubusercontent.com/78255828/163549939-2040ada5-5fdc-4b87-852f-6418999a32ee.png" width="300" height="300">
 Covid-19 Statistics based on location- React-Native project. The idea for this application came from mini project we did about predictions and visualization of virus at
 start of 2020, When covid-19 virus was new and there was no predictions about it. In
 that application we used machine learning algorithms to visualize the trends in covid-19
