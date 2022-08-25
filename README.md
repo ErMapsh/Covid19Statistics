@@ -5,22 +5,7 @@
 
 
 ## 💢Introduction
-Covid-19 Statistics based on location- React-Native project. The idea for this application came from mini project we did about predictions and visualization of virus at
-start of 2020, When covid-19 virus was new and there was no predictions about it. In
-that application we used machine learning algorithms to visualize the trends in covid-19
-outbreak in charts and graph formats. Since then world has changed allot and tracking
-the virus become need of time, Hence this app was created to track the daily number of
-cases, deaths and recoveries.
-This app works on bases of React-Native which is a open source UI software with
-JavaScript framework for writing real, natively creating mobile applications for iOS
-and Android And for the data collection part it uses rest AP-I’s.
-This types of app are easy to use and fast rendering. We can use the react components
-to render different parts so that we don’t have to render the whole page again, which
-reduces the load on users mobile.
-This app can give you real time updates on covid-19 based on the location you have
-selected, also the historical records of that location regarding the covid-19.
-This app can be very helpful to gain incites about current covid-19 condition, And also
-with its user friendliness it can be used by anyone who has a smartphone.
+Covid-19 Statistics based on location- React-Native project. The idea for this application came from a mini project we did about predictions and visualization of the virus at the start of 2020 When covid-19 virus was new and there were no predictions about it. In that application, we used machine learning algorithms to visualize the trends in the covid-19 outbreak in charts and graph formats. Since then the world has changed a lot and tracking the virus become needs time, Hence this app was created to track the daily number of cases, deaths, and recoveries. This app works on the bases of React-Native which is an open source UI software with a JavaScript framework for writing real, natively creating mobile applications for iOS and Android for the data collection part it uses rest AP-I. These types of apps are easy to use and have fast rendering. We can use the react components to render different parts so that we don’t have to render the whole page again, which reduces the load on users' mobile. This app can give you real-time updates on covid-19 based on the location you have selected, also the historical records of that location regarding the covid-19. This app can be very helpful to gain incites about current covid-19 conditions, And also with its user-friendliness, it can be used by anyone who has a smartphone.
 
 ## 💢Methodology
 ### various Methods used to develop the Project:
